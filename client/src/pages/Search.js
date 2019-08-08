@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import { BookListItem } from "../components/BookList";
-import API from "../api/API";
+import API from "../utils/API";
 import { Container, Row, Col } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 
@@ -57,10 +57,10 @@ class Books extends Component {
                                 <form>
                                     Book Search:
                                     <Input
-                                        name="search"
                                         value={this.state.search}
                                         onChange={this.handleInputChange}
-                                        placeholder="Search"
+                                        name="search"
+                                        placeholder="Book Search"
                                     />
                                     <FormBtn
                                         disabled={!(this.state.search)}

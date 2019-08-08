@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
-import API from "../api/API";
+import API from "../utils/API";
 
 class Detail extends Component {
     state = {
-        books: {}
+        book: {}
     };
 
     // Grab book with the id of this.props.match.params.id
