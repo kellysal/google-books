@@ -1,0 +1,13 @@
+#search,
+#saved {
+    color: white;
+}
+
+#search:hover,
+#saved:hover {
+    color: red;
+}
+
+#nav {
+    background-color:black;
+}
