@@ -18,15 +18,15 @@ class Books extends Component {
 
     }
 
-    handleInputChange = (e) => {
-        const { name, value } = e.target;
+    handleInputChange = event => {
+        const { name, value } = event.target;
         this.setState({
             [name]: value
         });
     };
 
-    handleFormSubmit = (e) => {
-        e.preventDefault();
+    handleFormSubmit = event => {
+        event.preventDefault();
         API.searchBook(this.state.search)
             .then(res => this.setState({ books: res.data.items }))
             .catch(err => console.log(err));
@@ -37,8 +37,8 @@ class Books extends Component {
         console.log(data);
 
         API.saveBook(data)
-            .then(res => alert("Saved") && this.loadBooks())
 
+            .then(res => this.loadBooks())
             .catch(err => console.log(err));
     }
 
